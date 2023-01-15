@@ -1,5 +1,6 @@
 package quotes.controllers;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
@@ -12,6 +13,7 @@ import quotes.services.QuoteService;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j
 @RestController
 @RequestMapping("/api")
 public class ApiController {
@@ -27,7 +29,9 @@ public class ApiController {
         int _page = 1;
         try {
             _page = Integer.parseInt(page);
-        }catch (Exception ignored) {}
+        }catch (Exception e) {
+            log.error("Api, method getAll: " + e.getMessage());
+        }
         var res = repository.findAll(PageRequest.of(_page - 1, 5));
         return new ResponseEntity<>(res.stream().collect(Collectors.toList()), HttpStatus.OK);
     }
@@ -37,7 +41,9 @@ public class ApiController {
         int _page = 1;
         try {
             _page = Integer.parseInt(page);
-        }catch (Exception ignored) {}
+        }catch (Exception e) {
+            log.error("Api, method getPage: " + e.getMessage());
+        }
         var res = service.getPage(_page);
         return new ResponseEntity<>(res, HttpStatus.OK);
     }

@@ -1,5 +1,6 @@
 package quotes.commands;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import quotes.models.Chat;
@@ -9,6 +10,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
+@Slf4j
 @Component
 public class BotCommands {
 
@@ -17,7 +19,7 @@ public class BotCommands {
 
     Chat chat;
 
-    @AppBotCommands(name = "/start", description = "Выствить начальные значения", showInMenu = true, showInKeyboard = true)
+    @AppBotCommands(name = "/start", description = "Выставить начальные значения", showInMenu = true, showInKeyboard = true)
     String start() { return "1"; }
 
     @AppBotCommands(name = "/next", description = "Следующая цитата", showInMenu = true, showInKeyboard = true)
@@ -40,7 +42,7 @@ public class BotCommands {
                 try {
                     responseText = (String) method.invoke(this);
                 } catch (IllegalAccessException | InvocationTargetException e) {
-
+                    log.error("Failed to invoke method: " + e.getMessage());
                 }
             }
         }

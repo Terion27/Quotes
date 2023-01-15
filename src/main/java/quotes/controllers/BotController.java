@@ -1,5 +1,6 @@
 package quotes.controllers;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -10,6 +11,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import quotes.config.BotConfig;
 import quotes.services.BotService;
 
+@Slf4j
 @Service
 public class BotController extends TelegramLongPollingBot {
 
@@ -37,8 +39,8 @@ public class BotController extends TelegramLongPollingBot {
             if (responseMessage != null) {
                 execute(responseMessage);
             }
-        } catch (TelegramApiException ignored) {
-
+        } catch (TelegramApiException e) {
+            log.error("Message is not sending: " + e.getMessage());
         }
 
     }

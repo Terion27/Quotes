@@ -8,6 +8,7 @@
 
 package quotes.services;
 
+import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -20,6 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+@Slf4j
 @Component
 public class BashParser {
 
@@ -40,7 +42,9 @@ public class BashParser {
                 String text = Objects.requireNonNull(quoteElement.select(".quotbody").first()).text();
                 if (!text.isEmpty()) quotes.put(id, text);
             }
-        } catch (IOException ignored){}
+        } catch (IOException e){
+            log.error("Unable to load page with quotes from internet: " + e.getMessage());
+        }
         return quotes;
     }
 
@@ -56,7 +60,7 @@ public class BashParser {
             Document doc = Jsoup.connect("http://ibash.org.ru/quote.php?id=" + id).get();
             return getParsingPage(doc);
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("Unable to load quote from internet: " + e.getMessage());
         }
         return null;
     }
@@ -71,7 +75,7 @@ public class BashParser {
             Document doc = Jsoup.connect("http://ibash.org.ru/random.php").get();
             return getParsingPage(doc);
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("Unable to load random quotes from internet: " + e.getMessage());
         }
         return null;
     }
