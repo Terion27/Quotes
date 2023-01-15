@@ -1,0 +1,94 @@
+/**
+ * BashParser - Parser layer.
+ *      getPageFromInternet() - downloading quotes by page number from the internet.
+ *      getQuoteByIdFromInternet() - downloading the quote by id from the internet.
+ *      getRandomFromInternet() - downloading a random quote from the internet.
+ *      getParsingPage() - parsing the quote page.
+ */
+
+package quotes.services;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import org.springframework.stereotype.Component;
+
+import java.io.IOException;
+import java.util.AbstractMap;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
+@Component
+public class BashParser {
+
+    /**
+     * getPageFromInternet() - downloading quotes by page number from the internet.
+     *
+     * @param pageNumber - page number from quotes
+     *
+     * @return - the page of quotes
+     */
+    public Map<Integer, String> getPageFromInternet(int pageNumber){
+        Map<Integer, String> quotes = new HashMap<>();
+        try {
+            Document doc = Jsoup.connect("http://ibash.org.ru/?page=" + pageNumber).get();
+            Elements sourceQuotes = doc.select(".quote");
+            for (Element quoteElement : sourceQuotes) {
+                int id = Integer.parseInt(Objects.requireNonNull(quoteElement.select("b").first()).text().substring(1));
+                String text = Objects.requireNonNull(quoteElement.select(".quotbody").first()).text();
+                if (!text.isEmpty()) quotes.put(id, text);
+            }
+        } catch (IOException ignored){}
+        return quotes;
+    }
+
+    /**
+     * getQuoteByIdFromInternet() - downloading the quote by id from the internet
+     *
+     * @param id - id quote
+     *
+     * @return - the quote
+     */
+    public Map.Entry<Integer, String> getQuoteByIdFromInternet(int id) {
+        try {
+            Document doc = Jsoup.connect("http://ibash.org.ru/quote.php?id=" + id).get();
+            return getParsingPage(doc);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * getRandomFromInternet() - downloading a random quote from the internet
+     *
+     * @return - a random quote
+     */
+    public Map.Entry<Integer, String> getRandomFromInternet(){
+        try {
+            Document doc = Jsoup.connect("http://ibash.org.ru/random.php").get();
+            return getParsingPage(doc);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * getParsingPage() - parsing the quote page
+     *
+     * @param doc - the quote page
+     *
+     * @return - the quote
+     */
+    private Map.Entry<Integer, String> getParsingPage(Document doc) {
+        Element quoteElement = doc.select(".quote").first();
+        assert quoteElement != null;
+        String realId = Objects.requireNonNull(quoteElement.select("b").first()).text();
+        if (realId.equals("#???") || realId.equals("")) return null;
+        String text = Objects.requireNonNull(quoteElement.select(".quotbody").first()).text();
+        return new AbstractMap.SimpleEntry<>(Integer.parseInt(realId.substring(1)), text);
+    }
+}
