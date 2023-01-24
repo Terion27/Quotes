@@ -1,7 +1,3 @@
-/**
- * Telegram Bot - https://t.me/fun_quotes_bot
- */
-
 package quotes;
 
 import lombok.extern.slf4j.Slf4j;
@@ -14,12 +10,20 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 import quotes.controllers.BotController;
 
+/**
+ * Telegram Bot - https://t.me/fun_quotes_bot
+ */
+
 @Slf4j
 @SpringBootApplication
 public class QuotesApplication implements CommandLineRunner {
 
     @Autowired
-    BotController botController;
+    private final BotController botController;
+
+    public QuotesApplication(BotController botController) {
+        this.botController = botController;
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(QuotesApplication.class, args);

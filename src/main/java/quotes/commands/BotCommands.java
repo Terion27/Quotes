@@ -19,7 +19,7 @@ public class BotCommands {
 
     Chat chat;
 
-    @AppBotCommands(name = "/start", description = "Выставить начальные значения", showInMenu = true, showInKeyboard = true)
+    @AppBotCommands(name = "/start", description = "Старт", showInMenu = true, showInKeyboard = true)
     String start() { return "1"; }
 
     @AppBotCommands(name = "/next", description = "Следующая цитата", showInMenu = true, showInKeyboard = true)
@@ -37,7 +37,7 @@ public class BotCommands {
         this.chat = chat;
         String responseText = "";
         for (Method method : getAppBotMethods()) {
-            if (method.getAnnotation(AppBotCommands.class).name().equals(messageText)) {
+            if (method.getAnnotation(AppBotCommands.class).description().equals(messageText)) {
                 method.setAccessible(true);
                 try {
                     responseText = (String) method.invoke(this);
@@ -52,7 +52,7 @@ public class BotCommands {
     public ArrayList<String> getListBotCommands() {
         ArrayList<String> commands = new ArrayList<>();
         for (Method method : getAppBotMethods()) {
-            commands.add(method.getAnnotation(AppBotCommands.class).name());
+            commands.add(method.getAnnotation(AppBotCommands.class).description());
         }
         return commands;
     }

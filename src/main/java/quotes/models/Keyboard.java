@@ -12,6 +12,7 @@ public class Keyboard {
     public ReplyKeyboardMarkup getKeyboard() {
         BotCommands botCommands = new BotCommands();
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
+
         replyKeyboardMarkup.setKeyboard(getKeyboardRows(botCommands.getListBotCommands()));
         replyKeyboardMarkup.setOneTimeKeyboard(true);
         replyKeyboardMarkup.setResizeKeyboard(true);
@@ -24,7 +25,7 @@ public class Keyboard {
     private ArrayList<KeyboardRow> getKeyboardRows(ArrayList<String> listBotCommands) {
         ArrayList<KeyboardRow> keyboardRows = new ArrayList<>();
         int comCount = listBotCommands.size();
-        int colCount = 3;
+        int colCount = 2;
         int rowsCount = comCount / colCount + ((comCount % colCount == 0) ? 0 : 1);
         for (int rowInd = 0; rowInd < rowsCount; rowInd++) {
             KeyboardRow row = new KeyboardRow();

@@ -1,5 +1,6 @@
 package quotes.services;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -11,10 +12,15 @@ import quotes.models.*;
 public class BotService {
 
     @Autowired
-    ChatService chatService;
+    private final ChatService chatService;
 
     @Autowired
-    BotCommands botCommands;
+    private final BotCommands botCommands;
+
+    public BotService(ChatService chatService, BotCommands botCommands) {
+        this.chatService = chatService;
+        this.botCommands = botCommands;
+    }
 
     public SendMessage getResponseMessage(Message message) {
         Long chatId = message.getChatId();

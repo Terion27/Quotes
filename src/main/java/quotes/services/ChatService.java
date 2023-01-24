@@ -14,7 +14,11 @@ import quotes.repositories.ChatRepository;
 public class ChatService {
 
     @Autowired
-    ChatRepository chatRepository;
+   private final ChatRepository chatRepository;
+
+    public ChatService(ChatRepository chatRepository) {
+        this.chatRepository = chatRepository;
+    }
 
     /**
      * processingChatSession() - Search for a chat in the database and register a new chat.

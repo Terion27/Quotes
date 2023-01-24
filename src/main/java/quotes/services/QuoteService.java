@@ -1,3 +1,14 @@
+package quotes.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import quotes.models.*;
+import quotes.repositories.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 /**
  * QuoteService - Quote layer.
  *   Main methods of the layer:
@@ -12,35 +23,24 @@
  *      saveChatRepository()- writing a chat to the repository.
  */
 
-package quotes.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import quotes.models.*;
-import quotes.repositories.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-@Component
+@Service
 public class QuoteService {
 
     @Autowired
-    BashParser parser;
+    private final BashParser parser;
     @Autowired
-    QuoteRepository quoteRepository;
+    private final QuoteRepository quoteRepository;
     @Autowired
-    ChatRepository chatRepository;
+    private final ChatRepository chatRepository;
 
-    /**
-     * getNextQuote() - getting the next quote by id.
-     *
-     * @param chat - getLastId() last viewed user id
-     *      getQuote() - loading quote from database
-     *
-     * @return - text of requested quote
-     */
+    public QuoteService(BashParser parser, QuoteRepository quoteRepository, ChatRepository chatRepository) {
+        this.parser = parser;
+        this.quoteRepository = quoteRepository;
+        this.chatRepository = chatRepository;
+    }
+
     public String getNextQuote(Chat chat) {
         Quote quote = null;
         int nextIdQuote = chat.getLastId();
@@ -52,14 +52,6 @@ public class QuoteService {
         return quote.getText();
     }
 
-    /**
-     * getPrevQuote() - getting the previous quote by id.
-     *
-     * @param chat - getLastId() last viewed user id
-     *      getQuote() - loading quote from database
-     *
-     * @return - text of requested quote
-     */
     public String getPrevQuote(Chat chat) {
         Quote quote = null;
         int newId = chat.getLastId();
@@ -72,15 +64,6 @@ public class QuoteService {
         return quote.getText();
     }
 
-    /**
-     * getRandQuote() - getting a random quote.
-     *
-     * @param chat
-     *          - getLastId() last viewed user id
-     *      getRandomQuote() - loading quote from database
-     *
-     * @return - text of requested quote
-     */
     public String getRandQuote(Chat chat) {
         Quote quote = getRandomQuote();
         if (quote == null) return null;
@@ -88,14 +71,6 @@ public class QuoteService {
         return quote.getText();
     }
 
-    /**
-     * getQuote() - loading quote by id from database
-     *
-     * @param id - quote id
-     *      parser.getQuoteByIdFromInternet() - get quote by id from internet
-     *
-     * @return - requested quote
-     */
     public Quote getQuote(int id) {
         var existingQuote = quoteRepository.findByQuoteIdEquals(id);
         if (existingQuote.isPresent())
@@ -107,12 +82,6 @@ public class QuoteService {
 
     }
 
-    /**
-     * getRandomQuote() - loading random quote from database
-     *      parser.getRandomFromInternet() - getting a random quote from internet
-     *
-     * @return - requested quote
-     */
     public Quote getRandomQuote() {
         var quoteEntry = parser.getRandomFromInternet();
         if (quoteEntry == null) return null;
@@ -121,14 +90,6 @@ public class QuoteService {
         return existingQuote.orElseGet(() -> saveQuoteRepository(quoteEntry.getKey(), quoteEntry.getValue()));
     }
 
-    /**
-     * getPage() - getting a quotes page by number
-     *
-     * @param pageNumber - requested page number
-     *      parser.getPageFromInternet() - loading a page by number from the internet
-     *
-     * @return - requested quotes page
-     */
     public List<Quote> getPage(int pageNumber) {
         List<Quote> quoteList = new ArrayList<>();
         Map<Integer, String> map = parser.getPageFromInternet(pageNumber);
@@ -143,14 +104,6 @@ public class QuoteService {
         return quoteList;
     }
 
-    /**
-     * saveQuoteRepository() - writing a quote to the repository
-     *
-     * @param quoteId - quote id
-     * @param textQuote - quote text
-     *
-     * @return - requested quote
-     */
     private Quote saveQuoteRepository(int quoteId, String textQuote) {
         var quote = new Quote();
         quote.setQuoteId(quoteId);
@@ -159,12 +112,6 @@ public class QuoteService {
         return quoteRepository.save(quote);
     }
 
-    /**
-     * saveChatRepository()- writing a chat to the repository
-     *
-     * @param chat
-     *          - setLastId() record last viewed user id
-     */
     private void saveChatRepository(Chat chat, int quoteId) {
         chat.setLastId(quoteId);
         chatRepository.save(chat);

@@ -1,11 +1,3 @@
-/**
- * BashParser - Parser layer.
- *      getPageFromInternet() - downloading quotes by page number from the internet.
- *      getQuoteByIdFromInternet() - downloading the quote by id from the internet.
- *      getRandomFromInternet() - downloading a random quote from the internet.
- *      getParsingPage() - parsing the quote page.
- */
-
 package quotes.services;
 
 import lombok.extern.slf4j.Slf4j;
@@ -21,17 +13,19 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * BashParser - Parser layer.
+ *      getPageFromInternet() - downloading quotes by page number from the internet.
+ *      getQuoteByIdFromInternet() - downloading the quote by id from the internet.
+ *      getRandomFromInternet() - downloading a random quote from the internet.
+ *      getParsingPage() - parsing the quote page.
+ */
+
+
 @Slf4j
 @Component
 public class BashParser {
 
-    /**
-     * getPageFromInternet() - downloading quotes by page number from the internet.
-     *
-     * @param pageNumber - page number from quotes
-     *
-     * @return - the page of quotes
-     */
     public Map<Integer, String> getPageFromInternet(int pageNumber){
         Map<Integer, String> quotes = new HashMap<>();
         try {
@@ -48,13 +42,6 @@ public class BashParser {
         return quotes;
     }
 
-    /**
-     * getQuoteByIdFromInternet() - downloading the quote by id from the internet
-     *
-     * @param id - id quote
-     *
-     * @return - the quote
-     */
     public Map.Entry<Integer, String> getQuoteByIdFromInternet(int id) {
         try {
             Document doc = Jsoup.connect("http://ibash.org.ru/quote.php?id=" + id).get();
@@ -65,11 +52,6 @@ public class BashParser {
         return null;
     }
 
-    /**
-     * getRandomFromInternet() - downloading a random quote from the internet
-     *
-     * @return - a random quote
-     */
     public Map.Entry<Integer, String> getRandomFromInternet(){
         try {
             Document doc = Jsoup.connect("http://ibash.org.ru/random.php").get();
@@ -80,13 +62,6 @@ public class BashParser {
         return null;
     }
 
-    /**
-     * getParsingPage() - parsing the quote page
-     *
-     * @param doc - the quote page
-     *
-     * @return - the quote
-     */
     private Map.Entry<Integer, String> getParsingPage(Document doc) {
         Element quoteElement = doc.select(".quote").first();
         assert quoteElement != null;
