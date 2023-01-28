@@ -8,6 +8,7 @@ import quotes.repositories.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Stream;
 
 /**
  * QuoteService - Quote layer.
@@ -88,14 +89,14 @@ public class QuoteService {
     public List<Quote> getPage(int pageNumber) {
         List<Quote> quoteList = new ArrayList<>();
         Map<Integer, String> map = parser.getPageFromInternet(pageNumber);
-        for (var entry : map.entrySet()) {
-            var existed = quoteRepository.findByQuoteIdEquals(entry.getKey());
+        map.forEach((key, value) -> {
+            var existed = quoteRepository.findByQuoteIdEquals(key);
             if (existed.isEmpty()) {
-                quoteList.add(saveQuoteRepository(entry.getKey(), entry.getValue()));
+                quoteList.add(saveQuoteRepository(key, value));
             } else {
                 quoteList.add(existed.get());
             }
-        }
+        });
         return quoteList;
     }
 
