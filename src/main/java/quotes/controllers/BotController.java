@@ -1,7 +1,7 @@
 package quotes.controllers;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -13,11 +13,9 @@ import quotes.services.BotService;
 
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class BotController extends TelegramLongPollingBot {
-
-    @Autowired
-    BotService botService;
-
+    private final BotService botService;
     BotConfig botConfig = new BotConfig();
 
     @Override

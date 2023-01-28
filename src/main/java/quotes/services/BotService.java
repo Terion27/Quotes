@@ -10,18 +10,15 @@ import quotes.models.*;
 @Component
 @RequiredArgsConstructor
 public class BotService {
-
-    private final ChatService chatService;
     private final BotCommands botCommands;
+    private final Keyboard keyboard;
 
     public SendMessage getResponseMessage(Message message) {
         Long chatId = message.getChatId();
-        Keyboard keyboard = new Keyboard();
-        Chat chat = chatService.processingChatSession(chatId);
 
         SendMessage responseMessage = new SendMessage();
         if (!message.getText().isEmpty()) {
-            String responseText = botCommands.runBotCommands(message.getText(), chat);
+            String responseText = botCommands.runBotCommands(message.getText(), chatId);
 
             responseMessage.setReplyMarkup(keyboard.getKeyboard());
             responseMessage.setText(responseText);

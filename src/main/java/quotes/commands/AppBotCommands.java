@@ -8,9 +8,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD, ElementType.FIELD})
 public @interface AppBotCommands {
-
     String name();
     String description();
-    boolean showInMenu() default false;
-    boolean showInKeyboard() default false;
 }

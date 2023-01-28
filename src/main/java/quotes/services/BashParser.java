@@ -66,8 +66,9 @@ public class BashParser {
         Element quoteElement = doc.select(".quote").first();
         assert quoteElement != null;
         String realId = Objects.requireNonNull(quoteElement.select("b").first()).text();
-        if (realId.equals("#???") || realId.equals("")) return null;
-        String text = Objects.requireNonNull(quoteElement.select(".quotbody").first()).text();
-        return new AbstractMap.SimpleEntry<>(Integer.parseInt(realId.substring(1)), text);
+        if (!realId.equals("#???") && !realId.equals("")) {
+            String text = Objects.requireNonNull(quoteElement.select(".quotbody").first()).text();
+            return new AbstractMap.SimpleEntry<>(Integer.parseInt(realId.substring(1)), text);        }
+        return null;
     }
 }

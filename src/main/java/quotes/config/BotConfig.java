@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 @Slf4j
 public class BotConfig {
-
     private static final String BOT_CONFIG_FILE = "d:\\bot_citatnik.txt";
     private final String BotUsername;
     private final String BotToken;

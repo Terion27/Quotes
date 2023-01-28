@@ -1,5 +1,7 @@
 package quotes.models;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardButton;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
@@ -7,10 +9,12 @@ import quotes.commands.BotCommands;
 
 import java.util.ArrayList;
 
+@Component
+@RequiredArgsConstructor
 public class Keyboard {
+    private final BotCommands botCommands;
 
     public ReplyKeyboardMarkup getKeyboard() {
-        BotCommands botCommands = new BotCommands();
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
 
         replyKeyboardMarkup.setKeyboard(getKeyboardRows(botCommands.getListBotCommands()));

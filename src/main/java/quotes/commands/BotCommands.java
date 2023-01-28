@@ -1,9 +1,8 @@
 package quotes.commands;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import quotes.models.Chat;
 import quotes.services.QuoteService;
 
 import java.lang.reflect.InvocationTargetException;
@@ -12,35 +11,31 @@ import java.util.ArrayList;
 
 @Slf4j
 @Component
+@RequiredArgsConstructor
 public class BotCommands {
+    private final QuoteService quoteService;
 
-    @Autowired
-    QuoteService quoteService;
+    @AppBotCommands(name = "/start", description = "Старт")
+    String start(Long chatId) { return "Старт!"; }
 
-    Chat chat;
+    @AppBotCommands(name = "/next", description = "Следующая цитата")
+    String next(Long chatId) { return quoteService.getNextQuote(chatId); }
 
-    @AppBotCommands(name = "/start", description = "Старт", showInMenu = true, showInKeyboard = true)
-    String start() { return "1"; }
+    @AppBotCommands(name = "/prev", description = "Предыдущая цитата")
+    String prev(Long chatId) { return quoteService.getPrevQuote(chatId); }
 
-    @AppBotCommands(name = "/next", description = "Следующая цитата", showInMenu = true, showInKeyboard = true)
-    String next() { return quoteService.getNextQuote(chat); }
-
-    @AppBotCommands(name = "/prev", description = "Предыдущая цитата", showInMenu = true, showInKeyboard = true)
-    String prev() { return quoteService.getPrevQuote(chat); }
-
-    @AppBotCommands(name = "/rand", description = "Случайная цитата", showInMenu = true, showInKeyboard = true)
-    String rand() { return quoteService.getRandQuote(chat); }
+    @AppBotCommands(name = "/rand", description = "Случайная цитата")
+    String rand(Long chatId) { return quoteService.getRandQuote(chatId); }
 
 
 
-    public String runBotCommands(String messageText, Chat chat) {
-        this.chat = chat;
+    public String runBotCommands(String messageText, Long chatId) {
         String responseText = "";
         for (Method method : getAppBotMethods()) {
             if (method.getAnnotation(AppBotCommands.class).description().equals(messageText)) {
                 method.setAccessible(true);
                 try {
-                    responseText = (String) method.invoke(this);
+                    responseText = (String) method.invoke(this, chatId);
                 } catch (IllegalAccessException | InvocationTargetException e) {
                     log.error("Failed to invoke method: " + e.getMessage());
                 }

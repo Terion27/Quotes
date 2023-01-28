@@ -1,10 +1,11 @@
 package quotes.controllers;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 import quotes.models.Quote;
 import quotes.repositories.QuoteRepository;
@@ -14,15 +15,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Slf4j
+@Component
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api")
 public class ApiController {
-
-    @Autowired
-    QuoteService service;
-
-    @Autowired
-    QuoteRepository repository;
+    private final QuoteService service;
+    private final QuoteRepository repository;
 
     @GetMapping("/all")
     public ResponseEntity<List<Quote>> getAll(@RequestParam(required = false, defaultValue = "1") String page) {

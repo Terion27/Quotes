@@ -12,7 +12,6 @@ import quotes.repositories.ChatRepository;
 
 @Component
 public class ChatService {
-
    private final ChatRepository chatRepository;
 
     public ChatService(ChatRepository chatRepository) {

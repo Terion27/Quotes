@@ -8,7 +8,6 @@ import quotes.repositories.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Stream;
 
 /**
  * QuoteService - Quote layer.
@@ -29,12 +28,13 @@ import java.util.stream.Stream;
 @Service
 @RequiredArgsConstructor
 public class QuoteService {
-
     private final BashParser parser;
     private final QuoteRepository quoteRepository;
     private final ChatRepository chatRepository;
+    private final ChatService chatService;
 
-    public String getNextQuote(Chat chat) {
+    public String getNextQuote(Long chatId) {
+        Chat chat = chatService.processingChatSession(chatId);
         Quote quote = null;
         int nextIdQuote = chat.getLastId();
         while (quote == null) {
@@ -45,7 +45,8 @@ public class QuoteService {
         return quote.getText();
     }
 
-    public String getPrevQuote(Chat chat) {
+    public String getPrevQuote(Long chatId) {
+        Chat chat = chatService.processingChatSession(chatId);
         Quote quote = null;
         int newId = chat.getLastId();
         while (quote == null) {
@@ -57,7 +58,8 @@ public class QuoteService {
         return quote.getText();
     }
 
-    public String getRandQuote(Chat chat) {
+    public String getRandQuote(Long chatId) {
+        Chat chat = chatService.processingChatSession(chatId);
         Quote quote = getRandomQuote();
         if (quote != null) {
             saveChatRepository(chat, quote.getQuoteId());
