@@ -1,8 +1,12 @@
 package quotes.models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "\"Chats\"")
 public class Chat {
     @Id
@@ -15,29 +19,5 @@ public class Chat {
 
     @Column(name = "\"lastId\"", nullable = false)
     private Integer lastId;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getChatId() {
-        return chatId;
-    }
-
-    public void setChatId(Long chatId) {
-        this.chatId = chatId;
-    }
-
-    public Integer getLastId() {
-        return lastId;
-    }
-
-    public void setLastId(Integer lastId) {
-        this.lastId = lastId;
-    }
 
 }

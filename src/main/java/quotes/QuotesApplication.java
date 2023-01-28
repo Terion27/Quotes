@@ -31,7 +31,7 @@ public class QuotesApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        TelegramBotsApi api = null;
+        TelegramBotsApi api;
         try {
             api = new TelegramBotsApi(DefaultBotSession.class);
             api.registerBot(botController);

@@ -1,8 +1,12 @@
 package quotes.models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "\"Quotes\"")
 public class Quote {
     @Id
@@ -15,29 +19,4 @@ public class Quote {
 
     @Column(name = "\"quoteId\"", nullable = false)
     private Integer quoteId;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
-
-    public Integer getQuoteId() {
-        return quoteId;
-    }
-
-    public void setQuoteId(Integer quoteId) {
-        this.quoteId = quoteId;
-    }
-
 }
