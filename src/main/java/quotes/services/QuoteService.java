@@ -1,6 +1,6 @@
 package quotes.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import quotes.models.*;
 import quotes.repositories.*;
@@ -26,20 +26,12 @@ import java.util.Map;
 
 
 @Service
+@RequiredArgsConstructor
 public class QuoteService {
 
-    @Autowired
     private final BashParser parser;
-    @Autowired
     private final QuoteRepository quoteRepository;
-    @Autowired
     private final ChatRepository chatRepository;
-
-    public QuoteService(BashParser parser, QuoteRepository quoteRepository, ChatRepository chatRepository) {
-        this.parser = parser;
-        this.quoteRepository = quoteRepository;
-        this.chatRepository = chatRepository;
-    }
 
     public String getNextQuote(Chat chat) {
         Quote quote = null;
@@ -66,9 +58,11 @@ public class QuoteService {
 
     public String getRandQuote(Chat chat) {
         Quote quote = getRandomQuote();
-        if (quote == null) return null;
-        saveChatRepository(chat, quote.getQuoteId());
-        return quote.getText();
+        if (quote != null) {
+            saveChatRepository(chat, quote.getQuoteId());
+            return quote.getText();
+        }
+        return null;
     }
 
     public Quote getQuote(int id) {
@@ -76,18 +70,19 @@ public class QuoteService {
         if (existingQuote.isPresent())
             return existingQuote.get();
         var quoteEntry = parser.getQuoteByIdFromInternet(id);
-        if (quoteEntry == null) return null;
-
-        return saveQuoteRepository(quoteEntry.getKey(), quoteEntry.getValue());
-
+        if (quoteEntry != null) {
+            return saveQuoteRepository(quoteEntry.getKey(), quoteEntry.getValue());
+        }
+        return null;
     }
 
     public Quote getRandomQuote() {
         var quoteEntry = parser.getRandomFromInternet();
-        if (quoteEntry == null) return null;
-        var existingQuote = quoteRepository.findByQuoteIdEquals(quoteEntry.getKey());
-
-        return existingQuote.orElseGet(() -> saveQuoteRepository(quoteEntry.getKey(), quoteEntry.getValue()));
+        if (quoteEntry != null) {
+            var existingQuote = quoteRepository.findByQuoteIdEquals(quoteEntry.getKey());
+            return existingQuote.orElseGet(() -> saveQuoteRepository(quoteEntry.getKey(), quoteEntry.getValue()));
+        }
+        return null;
     }
 
     public List<Quote> getPage(int pageNumber) {
