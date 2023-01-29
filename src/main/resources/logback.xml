@@ -1,6 +1,6 @@
 <configuration>
 
-<!--    <property name="HOME_LOG" value="/var/log/TraderStats/FinInfo_bot/app.log"/>-->
+    <!-- <property name="HOME_LOG" value="/var/log/Quotes_bot/app.log"/> -->
     <property name="HOME_LOG" value="app.log"/>
 
     <appender name="FILE-ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
