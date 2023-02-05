@@ -16,7 +16,7 @@ import quotes.services.BotService;
 @RequiredArgsConstructor
 public class BotController extends TelegramLongPollingBot {
     private final BotService botService;
-    BotConfig botConfig = new BotConfig();
+    private final BotConfig botConfig;
 
     @Override
     public String getBotUsername() {
