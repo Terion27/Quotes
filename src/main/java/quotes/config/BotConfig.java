@@ -1,37 +1,24 @@
 package quotes.config;
 
+import lombok.Getter;
+
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
 
+@Getter
 @Slf4j
+@Configuration
+@RequiredArgsConstructor
+@PropertySource("application.properties")
 public class BotConfig {
-    private static final String BOT_CONFIG_FILE = "d:\\bot_citatnik.txt";
-    private String BotUsername;
-    private String BotToken;
 
-    public BotConfig() {
-        getParams();
-    }
+    @Value("${bot.name}")
+    private final String botName;
 
-    private void getParams() {
-        try {
-            Scanner scanFile = new Scanner(new FileInputStream(BOT_CONFIG_FILE));
-            this.BotUsername = scanFile.nextLine();
-            this.BotToken = scanFile.nextLine();
-        } catch (FileNotFoundException e) {
-            log.error("Configuration file is missing: " + e.getMessage());
-            throw new RuntimeException(e);
-        }
-    }
-
-    public String getBotName() {
-        return this.BotUsername;
-    }
-
-    public String getToken() {
-        return this.BotToken;
-    }
+    @Value("${bot.token}")
+    private final String token;
 }
