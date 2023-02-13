@@ -1,4 +1,4 @@
-package quotes.services;
+package quotes.commons;
 
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
@@ -13,18 +13,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-/**
- * BashParser - Parser layer.
- *      getPageFromInternet() - downloading quotes by page number from the internet.
- *      getQuoteByIdFromInternet() - downloading the quote by id from the internet.
- *      getRandomFromInternet() - downloading a random quote from the internet.
- *      getParsingPage() - parsing the quote page.
- */
-
-
 @Slf4j
 @Component
-public class BashParser {
+public class ParserCommon {
+
+    public Map.Entry<Integer, String> getRandomFromInternet(){
+        try {
+            Document doc = Jsoup.connect("http://ibash.org.ru/random.php").get();
+            return getParsingPage(doc);
+        } catch (IOException e) {
+            log.error("Unable to load random quotes from internet: " + e.getMessage());
+        }
+        return null;
+    }
+
+    private Map.Entry<Integer, String> getParsingPage(Document doc) {
+        Element quoteElement = doc.select(".quote").first();
+        assert quoteElement != null;
+        String realId = Objects.requireNonNull(quoteElement.select("b").first()).text();
+        if (!realId.equals("#???") && !realId.equals("")) {
+            String text = Objects.requireNonNull(quoteElement.select(".quotbody").first()).text();
+            return new AbstractMap.SimpleEntry<>(Integer.parseInt(realId.substring(1)), text);        }
+        return null;
+    }
 
     public Map<Integer, String> getPageFromInternet(int pageNumber){
         Map<Integer, String> quotes = new HashMap<>();
@@ -52,23 +63,4 @@ public class BashParser {
         return null;
     }
 
-    public Map.Entry<Integer, String> getRandomFromInternet(){
-        try {
-            Document doc = Jsoup.connect("http://ibash.org.ru/random.php").get();
-            return getParsingPage(doc);
-        } catch (IOException e) {
-            log.error("Unable to load random quotes from internet: " + e.getMessage());
-        }
-        return null;
-    }
-
-    private Map.Entry<Integer, String> getParsingPage(Document doc) {
-        Element quoteElement = doc.select(".quote").first();
-        assert quoteElement != null;
-        String realId = Objects.requireNonNull(quoteElement.select("b").first()).text();
-        if (!realId.equals("#???") && !realId.equals("")) {
-            String text = Objects.requireNonNull(quoteElement.select(".quotbody").first()).text();
-            return new AbstractMap.SimpleEntry<>(Integer.parseInt(realId.substring(1)), text);        }
-        return null;
-    }
 }

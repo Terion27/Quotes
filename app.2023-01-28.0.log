@@ -1,0 +1,762 @@
+2023-01-28 16:38:44,841 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 16:38:45,148 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 8392 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 16:38:45,151 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 16:38:49,202 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 16:38:49,719 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 440 ms. Found 2 JPA repository interfaces.
+2023-01-28 16:38:54,010 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 16:38:54,062 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 16:38:54,064 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 16:38:54,064 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 16:38:54,822 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 16:38:54,823 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 9387 ms
+2023-01-28 16:39:00,273 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 16:39:00,597 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 16:39:01,459 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 16:39:02,116 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 16:39:03,188 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7c4b5ceb
+2023-01-28 16:39:03,192 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 16:39:03,699 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 16:39:07,326 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 16:39:07,355 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 16:39:07,767 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quotesApplication': Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'botController' defined in file [D:\Bussines\Projects\Quotes\target\classes\quotes\controllers\BotController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'botService' defined in file [D:\Bussines\Projects\Quotes\target\classes\quotes\services\BotService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'quotes.services.CommandService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-01-28 16:39:07,768 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 16:39:07,778 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-01-28 16:39:07,859 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-01-28 16:39:07,866 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2023-01-28 16:39:07,951 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-28 16:39:08,151 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in quotes.services.BotService required a bean of type 'quotes.services.CommandService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'quotes.services.CommandService' in your configuration.
+
+2023-01-28 16:45:37,939 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 16:45:38,390 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 10948 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 16:45:38,397 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 16:45:41,827 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 16:45:42,112 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 239 ms. Found 2 JPA repository interfaces.
+2023-01-28 16:45:45,034 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 16:45:45,079 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 16:45:45,081 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 16:45:45,081 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 16:45:45,853 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 16:45:45,854 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7167 ms
+2023-01-28 16:45:47,198 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 16:45:47,396 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 16:45:48,120 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 16:45:48,693 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 16:45:49,308 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ee92e7d
+2023-01-28 16:45:49,313 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 16:45:49,523 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 16:45:53,298 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 16:45:53,327 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 16:45:56,176 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 16:45:57,876 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 16:45:58,046 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 16:45:58,109 INFO quotes.QuotesApplication [main] Started QuotesApplication in 21.509 seconds (process running for 25.365)
+2023-01-28 16:46:10,562 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 16:46:10,566 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 16:46:10,607 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-28 16:47:57,261 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 16:47:57,469 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 13488 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 16:47:57,476 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 16:48:01,377 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 16:48:01,725 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 311 ms. Found 2 JPA repository interfaces.
+2023-01-28 16:48:04,755 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 16:48:04,796 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 16:48:04,799 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 16:48:04,800 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 16:48:05,560 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 16:48:05,561 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7756 ms
+2023-01-28 16:48:06,472 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 16:48:06,688 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 16:48:07,494 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 16:48:08,040 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 16:48:08,713 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b8a144e
+2023-01-28 16:48:08,718 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 16:48:08,805 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 16:48:12,610 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 16:48:12,637 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 16:48:12,768 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quotesApplication': Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'botController' defined in file [D:\Bussines\Projects\Quotes\target\classes\quotes\controllers\BotController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'quotes.services.BotService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-01-28 16:48:12,770 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 16:48:12,783 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-01-28 16:48:12,806 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-01-28 16:48:12,811 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2023-01-28 16:48:12,862 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-28 16:48:12,975 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in quotes.controllers.BotController required a bean of type 'quotes.services.BotService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'quotes.services.BotService' in your configuration.
+
+2023-01-28 16:49:02,103 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 16:49:02,447 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 9492 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 16:49:02,452 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 16:49:05,856 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 16:49:06,234 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 319 ms. Found 2 JPA repository interfaces.
+2023-01-28 16:49:09,235 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 16:49:09,288 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 16:49:09,291 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 16:49:09,292 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 16:49:09,827 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 16:49:09,828 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7120 ms
+2023-01-28 16:49:10,771 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 16:49:11,066 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 16:49:11,834 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 16:49:12,415 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 16:49:13,222 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b8a144e
+2023-01-28 16:49:13,227 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 16:49:13,371 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 16:49:17,336 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 16:49:17,364 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 16:49:17,465 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'quotesApplication': Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'botController' defined in file [D:\Bussines\Projects\Quotes\target\classes\quotes\controllers\BotController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'botService' defined in file [D:\Bussines\Projects\Quotes\target\classes\quotes\services\BotService.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'quotes.services.CommandService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-01-28 16:49:17,466 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 16:49:17,475 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-01-28 16:49:17,496 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-01-28 16:49:17,502 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2023-01-28 16:49:17,562 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-28 16:49:17,678 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in quotes.services.BotService required a bean of type 'quotes.services.CommandService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'quotes.services.CommandService' in your configuration.
+
+2023-01-28 16:50:04,826 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 16:50:05,021 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 12724 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 16:50:05,027 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 16:50:08,397 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 16:50:08,659 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 226 ms. Found 2 JPA repository interfaces.
+2023-01-28 16:50:11,744 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 16:50:11,820 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 16:50:11,830 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 16:50:11,831 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 16:50:12,301 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 16:50:12,302 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7044 ms
+2023-01-28 16:50:13,072 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 16:50:13,350 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 16:50:14,579 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 16:50:15,511 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 16:50:16,259 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ee92e7d
+2023-01-28 16:50:16,265 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 16:50:16,471 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 16:50:20,842 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 16:50:20,869 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 16:50:21,988 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 16:50:25,407 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 16:50:25,505 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 16:50:25,568 INFO quotes.QuotesApplication [main] Started QuotesApplication in 22.063 seconds (process running for 25.605)
+2023-01-28 16:50:31,851 ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession [fun_quotes_bot Telegram Executor] object is not an instance of declaring class
+java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.checkReceiver(DirectMethodHandleAccessor.java:202)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:100)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at quotes.services.CommandService.runBotCommands(CommandService.java:34)
+	at quotes.services.CommandService.getResponse(CommandService.java:21)
+	at quotes.services.BotService.getResponseMessage(BotService.java:20)
+	at quotes.controllers.BotController.onUpdateReceived(BotController.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317)
+2023-01-28 16:50:31,933 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 16:50:31,940 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 16:50:31,960 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-28 16:51:08,971 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 16:51:09,274 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 21692 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 16:51:09,280 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 16:51:13,667 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 16:51:13,902 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 195 ms. Found 2 JPA repository interfaces.
+2023-01-28 16:51:18,334 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 16:51:18,380 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 16:51:18,382 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 16:51:18,383 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 16:51:18,953 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 16:51:18,954 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 9417 ms
+2023-01-28 16:51:20,035 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 16:51:20,323 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 16:51:21,419 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 16:51:22,106 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 16:51:22,913 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@66020d69
+2023-01-28 16:51:22,918 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 16:51:23,001 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 16:51:28,586 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 16:51:28,616 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 16:51:29,829 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 16:51:33,296 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 16:51:33,372 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 16:51:33,433 INFO quotes.QuotesApplication [main] Started QuotesApplication in 26.481 seconds (process running for 30.208)
+2023-01-28 16:52:29,108 ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession [fun_quotes_bot Telegram Executor] object is not an instance of declaring class
+java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.checkReceiver(DirectMethodHandleAccessor.java:202)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:100)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at quotes.services.CommandService.runBotCommands(CommandService.java:34)
+	at quotes.services.CommandService.getResponse(CommandService.java:21)
+	at quotes.services.BotService.getResponseMessage(BotService.java:20)
+	at quotes.controllers.BotController.onUpdateReceived(BotController.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317)
+2023-01-28 16:53:48,515 INFO org.apache.coyote.http11.Http11Processor [http-nio-8080-exec-1] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x03{'bC0x9a0xaa0x12R20xab0x830x1d0xb90xa5v0xfbW0x99RB0x950xa30x91V0xdb(0x1cI0x1430xbeA ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-28 16:53:48,547 INFO org.apache.coyote.http11.Http11Processor [http-nio-8080-exec-2] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030x100x07]M?0x0e0xbb0x0870U0x810xac0xc70x8f0x890x7f]0x95A0x870x840x05D0xe80xab0xe4b0xa7n0xf3 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-28 16:54:27,693 WARN com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53s146ms449µs500ns).
+2023-01-28 16:55:37,646 ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession [fun_quotes_bot Telegram Executor] object is not an instance of declaring class
+java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.checkReceiver(DirectMethodHandleAccessor.java:202)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:100)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at quotes.services.CommandService.runBotCommands(CommandService.java:34)
+	at quotes.services.CommandService.getResponse(CommandService.java:21)
+	at quotes.services.BotService.getResponseMessage(BotService.java:20)
+	at quotes.controllers.BotController.onUpdateReceived(BotController.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317)
+2023-01-28 16:55:37,656 ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession [fun_quotes_bot Telegram Connection] Remote host terminated the handshake
+javax.net.ssl.SSLHandshakeException: Remote host terminated the handshake
+	at java.base/sun.security.ssl.SSLSocketImpl.handleEOF(SSLSocketImpl.java:1709)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1508)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1415)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:450)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:421)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:436)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:384)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.getUpdatesFromServer(DefaultBotSession.java:250)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$ReaderThread.run(DefaultBotSession.java:189)
+Caused by: java.io.EOFException: SSL peer shut down incorrectly
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1500)
+	... 16 common frames omitted
+2023-01-28 16:58:03,864 WARN com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m26s257ms386µs500ns).
+2023-01-28 16:58:53,853 WARN com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s987ms849µs700ns).
+2023-01-28 17:00:01,072 WARN com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s220ms7µs400ns).
+2023-01-28 17:00:01,212 ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession [fun_quotes_bot Telegram Executor] object is not an instance of declaring class
+java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.checkReceiver(DirectMethodHandleAccessor.java:202)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:100)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at quotes.services.CommandService.runBotCommands(CommandService.java:34)
+	at quotes.services.CommandService.getResponse(CommandService.java:21)
+	at quotes.services.BotService.getResponseMessage(BotService.java:20)
+	at quotes.controllers.BotController.onUpdateReceived(BotController.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317)
+2023-01-28 17:00:13,851 ERROR quotes.controllers.BotController [fun_quotes_bot Telegram Executor] Message is not sending: Text parameter can't be empty
+2023-01-28 17:02:02,984 WARN com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s654ms472µs600ns).
+2023-01-28 17:02:03,018 ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession [fun_quotes_bot Telegram Executor] object is not an instance of declaring class
+java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.checkReceiver(DirectMethodHandleAccessor.java:202)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:100)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at quotes.services.CommandService.runBotCommands(CommandService.java:34)
+	at quotes.services.CommandService.getResponse(CommandService.java:21)
+	at quotes.services.BotService.getResponseMessage(BotService.java:20)
+	at quotes.controllers.BotController.onUpdateReceived(BotController.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317)
+2023-01-28 17:02:03,146 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:02:03,153 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 17:02:03,235 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-28 17:02:28,339 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 17:02:28,504 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 13796 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 17:02:28,507 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 17:02:32,143 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 17:02:32,432 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 241 ms. Found 2 JPA repository interfaces.
+2023-01-28 17:02:36,006 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 17:02:36,054 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 17:02:36,062 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 17:02:36,063 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 17:02:36,593 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 17:02:36,594 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7857 ms
+2023-01-28 17:02:37,886 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 17:02:38,951 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 17:02:39,659 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 17:02:40,197 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 17:02:41,193 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7345f97d
+2023-01-28 17:02:41,198 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 17:02:41,452 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 17:02:45,244 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 17:02:45,273 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:02:46,325 WARN org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'botCommands' defined in file [D:\Bussines\Projects\Quotes\target\classes\quotes\commands\BotCommands.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'quotes.services.QuoteService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-01-28 17:02:46,326 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:02:46,334 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-01-28 17:02:46,360 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-01-28 17:02:46,365 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2023-01-28 17:02:46,416 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-01-28 17:02:46,539 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in quotes.commands.BotCommands required a bean of type 'quotes.services.QuoteService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'quotes.services.QuoteService' in your configuration.
+
+2023-01-28 17:03:59,382 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 17:03:59,593 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 3480 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 17:03:59,597 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 17:04:03,192 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 17:04:03,484 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 253 ms. Found 2 JPA repository interfaces.
+2023-01-28 17:04:06,567 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 17:04:06,620 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 17:04:06,623 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 17:04:06,623 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 17:04:07,334 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 17:04:07,336 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7512 ms
+2023-01-28 17:04:08,328 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 17:04:08,821 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 17:04:09,884 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 17:04:10,678 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 17:04:11,509 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7345f97d
+2023-01-28 17:04:11,514 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 17:04:11,667 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 17:04:15,658 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 17:04:15,686 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:04:18,618 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 17:04:20,139 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 17:04:20,246 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 17:04:20,345 INFO quotes.QuotesApplication [main] Started QuotesApplication in 22.626 seconds (process running for 26.345)
+2023-01-28 17:04:47,025 ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession [fun_quotes_bot Telegram Executor] object is not an instance of declaring class
+java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.checkReceiver(DirectMethodHandleAccessor.java:202)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:100)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at quotes.services.CommandService.runBotCommands(CommandService.java:34)
+	at quotes.services.CommandService.getResponse(CommandService.java:21)
+	at quotes.services.BotService.getResponseMessage(BotService.java:20)
+	at quotes.controllers.BotController.onUpdateReceived(BotController.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317)
+2023-01-28 17:05:13,057 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:05:13,064 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 17:05:13,096 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-28 17:05:39,880 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 17:05:40,080 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 1684 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 17:05:40,086 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 17:05:43,699 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 17:05:44,036 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 284 ms. Found 2 JPA repository interfaces.
+2023-01-28 17:05:47,153 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 17:05:47,211 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 17:05:47,217 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 17:05:47,218 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 17:05:47,782 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 17:05:47,783 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7458 ms
+2023-01-28 17:05:48,898 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 17:05:49,117 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 17:05:49,790 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 17:05:50,405 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 17:05:51,420 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2b44605c
+2023-01-28 17:05:51,426 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 17:05:51,561 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 17:05:55,880 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 17:05:55,913 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:05:59,294 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 17:06:01,191 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 17:06:01,270 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 17:06:01,324 INFO quotes.QuotesApplication [main] Started QuotesApplication in 22.914 seconds (process running for 26.681)
+2023-01-28 17:06:11,657 ERROR org.telegram.telegrambots.updatesreceivers.DefaultBotSession [fun_quotes_bot Telegram Executor] object is not an instance of declaring class
+java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.checkReceiver(DirectMethodHandleAccessor.java:202)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:100)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at quotes.services.CommandService.runBotCommands(CommandService.java:34)
+	at quotes.services.CommandService.getResponse(CommandService.java:21)
+	at quotes.services.BotService.getResponseMessage(BotService.java:20)
+	at quotes.controllers.BotController.onUpdateReceived(BotController.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27)
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:317)
+2023-01-28 17:06:54,041 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-28 17:06:54,042 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-01-28 17:06:54,044 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-01-28 17:09:25,760 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:09:25,765 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 17:09:25,877 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-28 17:12:41,237 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 17:12:41,478 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 2348 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 17:12:41,498 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 17:12:45,592 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 17:12:46,027 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 338 ms. Found 2 JPA repository interfaces.
+2023-01-28 17:12:49,167 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 17:12:49,210 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 17:12:49,217 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 17:12:49,218 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 17:12:49,786 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 17:12:49,787 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7921 ms
+2023-01-28 17:12:50,614 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 17:12:50,955 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 17:12:51,713 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 17:12:52,347 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 17:12:53,883 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4af7dd6a
+2023-01-28 17:12:53,888 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 17:12:54,035 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 17:12:58,051 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 17:12:58,078 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:13:00,656 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 17:13:02,742 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 17:13:02,820 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 17:13:02,856 INFO quotes.QuotesApplication [main] Started QuotesApplication in 23.589 seconds (process running for 26.858)
+2023-01-28 17:13:22,172 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:13:22,179 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 17:13:22,291 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-28 17:14:21,824 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 17:14:22,065 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 10792 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 17:14:22,069 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 17:14:26,010 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 17:14:26,299 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 240 ms. Found 2 JPA repository interfaces.
+2023-01-28 17:14:29,433 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 17:14:29,472 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 17:14:29,474 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 17:14:29,475 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 17:14:30,091 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 17:14:30,092 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7758 ms
+2023-01-28 17:14:31,132 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 17:14:31,395 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 17:14:32,192 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 17:14:32,672 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 17:14:33,575 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4af7dd6a
+2023-01-28 17:14:33,580 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 17:14:33,733 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 17:14:37,671 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 17:14:37,700 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:14:40,343 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 17:14:42,321 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 17:14:42,419 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 17:14:42,463 INFO quotes.QuotesApplication [main] Started QuotesApplication in 22.191 seconds (process running for 25.563)
+2023-01-28 17:14:56,138 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:14:56,146 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 17:14:56,215 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-28 17:42:54,694 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 17:42:55,176 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 11628 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 17:42:55,183 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 17:43:00,791 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 17:43:01,197 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 370 ms. Found 2 JPA repository interfaces.
+2023-01-28 17:43:04,349 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 17:43:04,392 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 17:43:04,394 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 17:43:04,394 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 17:43:04,915 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 17:43:04,915 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 9391 ms
+2023-01-28 17:43:08,211 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 17:43:08,460 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 17:43:09,260 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 17:43:09,849 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 17:43:10,653 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4af7dd6a
+2023-01-28 17:43:10,658 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 17:43:10,807 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 17:43:14,359 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 17:43:14,387 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:43:19,025 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 17:43:21,110 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 17:43:21,231 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 17:43:21,297 INFO quotes.QuotesApplication [main] Started QuotesApplication in 28.421 seconds (process running for 32.347)
+2023-01-28 17:43:51,514 INFO org.apache.coyote.http11.Http11Processor [http-nio-8080-exec-1] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030xac0xdfT0xa90xbc0x9e0x07gk0x1260x93^r]0xbf0xa60x960xb00x8f0xb80xc90xb1{0x980x110x13-z0xd7|e ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-28 17:43:52,578 ERROR quotes.commands.BotCommands [fun_quotes_bot Telegram Executor] Failed to invoke method: null
+2023-01-28 17:43:52,580 ERROR quotes.controllers.BotController [fun_quotes_bot Telegram Executor] Message is not sending: Text parameter can't be empty
+2023-01-28 17:45:13,713 ERROR quotes.commands.BotCommands [fun_quotes_bot Telegram Executor] Failed to invoke method: null
+2023-01-28 17:46:15,962 ERROR quotes.controllers.BotController [fun_quotes_bot Telegram Executor] Message is not sending: Text parameter can't be empty
+2023-01-28 17:46:21,189 ERROR quotes.commands.BotCommands [fun_quotes_bot Telegram Executor] Failed to invoke method: null
+2023-01-28 17:46:21,189 ERROR quotes.controllers.BotController [fun_quotes_bot Telegram Executor] Message is not sending: Text parameter can't be empty
+2023-01-28 17:47:29,936 WARN com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s386ms644µs100ns).
+2023-01-28 17:50:30,675 WARN com.zaxxer.hikari.pool.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m35s665ms845µs400ns).
+2023-01-28 17:50:42,007 ERROR quotes.commands.BotCommands [fun_quotes_bot Telegram Executor] Failed to invoke method: null
+2023-01-28 17:50:42,075 ERROR quotes.controllers.BotController [fun_quotes_bot Telegram Executor] Message is not sending: Text parameter can't be empty
+2023-01-28 17:50:51,038 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:50:51,046 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 17:50:51,061 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-28 17:56:40,890 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 17:56:41,181 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 16716 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 17:56:41,188 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 17:56:45,030 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 17:56:45,312 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 243 ms. Found 2 JPA repository interfaces.
+2023-01-28 17:56:49,230 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 17:56:49,285 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 17:56:49,293 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 17:56:49,307 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 17:56:49,862 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 17:56:49,863 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 8364 ms
+2023-01-28 17:56:51,041 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 17:56:51,440 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 17:56:52,477 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 17:56:53,088 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 17:56:54,065 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5844a2d1
+2023-01-28 17:56:54,070 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 17:56:54,246 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 17:56:58,361 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 17:56:58,393 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 17:57:01,235 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 17:57:03,360 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 17:57:03,477 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 17:57:03,547 INFO quotes.QuotesApplication [main] Started QuotesApplication in 24.35 seconds (process running for 28.508)
+2023-01-28 18:00:33,440 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 18:00:33,445 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 18:00:33,468 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-28 18:07:25,015 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 18:07:25,257 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 2764 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 18:07:25,262 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 18:07:29,246 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 18:07:29,567 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 287 ms. Found 2 JPA repository interfaces.
+2023-01-28 18:07:32,981 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 18:07:33,023 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 18:07:33,025 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 18:07:33,025 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 18:07:33,744 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 18:07:33,746 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 8234 ms
+2023-01-28 18:07:34,963 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 18:07:35,224 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 18:07:36,196 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 18:07:37,093 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 18:07:37,844 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3f866f50
+2023-01-28 18:07:37,849 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 18:07:38,067 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 18:07:41,817 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 18:07:41,846 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 18:07:44,944 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 18:07:46,957 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 18:07:47,105 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 18:07:47,160 INFO quotes.QuotesApplication [main] Started QuotesApplication in 23.575 seconds (process running for 26.959)
+2023-01-28 18:13:57,274 INFO org.apache.coyote.http11.Http11Processor [http-nio-8080-exec-1] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030xe0>0xd70x180x1fh0xb30xcd0x0b0x0ajh0xf00xd60x0c#0x0fQ0xa00xd1x0x87w0xd30x880x090xc5f0xf8C0xf51 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-28 20:03:31,820 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 20:03:31,831 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 20:03:31,846 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-28 20:04:00,448 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 20:04:00,735 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 17776 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 20:04:00,739 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 20:04:04,392 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 20:04:04,727 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 307 ms. Found 2 JPA repository interfaces.
+2023-01-28 20:04:08,180 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 20:04:08,242 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 20:04:08,244 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 20:04:08,244 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 20:04:08,925 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 20:04:08,926 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7949 ms
+2023-01-28 20:04:10,098 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 20:04:10,327 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 20:04:11,286 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 20:04:11,863 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 20:04:12,550 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b5d9f1e
+2023-01-28 20:04:12,555 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 20:04:12,671 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 20:04:16,456 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 20:04:16,484 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 20:04:19,164 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 20:04:20,785 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 20:04:20,901 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 20:04:20,968 INFO quotes.QuotesApplication [main] Started QuotesApplication in 21.742 seconds (process running for 25.23)
+2023-01-28 20:04:22,708 INFO org.apache.coyote.http11.Http11Processor [http-nio-8080-exec-1] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x03L0x150x0d0x82=0x037m0xcf0xe8ye0xae=&0x8c0x050x12-0xedg0xe30x0d)0xd60xac<G0xc20xbe0xcf4 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-28 20:11:28,133 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 20:11:28,142 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 20:11:28,236 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-28 22:51:56,454 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 22:51:56,769 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 22148 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 22:51:56,775 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 22:52:02,557 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 22:52:02,945 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 359 ms. Found 2 JPA repository interfaces.
+2023-01-28 22:52:07,742 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 22:52:07,790 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 22:52:07,792 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 22:52:07,793 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 22:52:08,470 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 22:52:08,471 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 11427 ms
+2023-01-28 22:52:09,656 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 22:52:09,880 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 22:52:10,699 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 22:52:11,356 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 22:52:12,115 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22048bd6
+2023-01-28 22:52:12,120 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 22:52:12,289 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 22:52:17,139 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 22:52:17,173 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 22:52:20,638 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 22:52:23,183 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 22:52:23,373 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 22:52:23,436 INFO quotes.QuotesApplication [main] Started QuotesApplication in 27.094 seconds (process running for 30.465)
+2023-01-28 22:53:25,033 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 22:53:25,038 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 22:53:25,089 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-28 23:00:30,963 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 23:00:31,228 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 14624 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 23:00:31,232 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 23:00:35,447 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 23:00:35,782 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 280 ms. Found 2 JPA repository interfaces.
+2023-01-28 23:00:40,188 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 23:00:40,229 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 23:00:40,231 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 23:00:40,232 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 23:00:40,827 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 23:00:40,828 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 9360 ms
+2023-01-28 23:00:41,836 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 23:00:42,127 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 23:00:43,026 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 23:00:43,716 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 23:00:44,634 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22048bd6
+2023-01-28 23:00:44,641 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 23:00:44,730 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 23:00:49,956 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 23:00:49,985 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 23:00:53,771 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 23:00:55,643 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 23:00:55,756 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 23:00:55,820 INFO quotes.QuotesApplication [main] Started QuotesApplication in 26.44 seconds (process running for 30.057)
+2023-01-28 23:04:24,795 INFO org.apache.coyote.http11.Http11Processor [http-nio-8080-exec-1] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x037@0xe70x190x970xa3:0xb50xff0x190x000x1f0x1d0xd50xe50xe40x830xae0x090x950xe4#0xe5O0y0xe90xf30xaa0xec;0xfd ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-01-28 23:04:51,163 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 23:04:51,169 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 23:04:51,184 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-28 23:05:28,177 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.0.Final
+2023-01-28 23:05:28,492 INFO quotes.QuotesApplication [main] Starting QuotesApplication using Java 18.0.1.1 with PID 15324 (D:\Bussines\Projects\Quotes\target\classes started by Terion in D:\Bussines\Projects\Quotes)
+2023-01-28 23:05:28,495 INFO quotes.QuotesApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-28 23:05:33,096 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-28 23:05:33,519 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 346 ms. Found 2 JPA repository interfaces.
+2023-01-28 23:05:36,669 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-01-28 23:05:36,708 INFO org.apache.coyote.http11.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-28 23:05:36,712 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-01-28 23:05:36,714 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.4]
+2023-01-28 23:05:37,484 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-01-28 23:05:37,485 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 8670 ms
+2023-01-28 23:05:38,485 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-28 23:05:38,709 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-01-28 23:05:39,423 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-01-28 23:05:40,071 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-28 23:05:40,791 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5618fc1f
+2023-01-28 23:05:40,796 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-28 23:05:41,000 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28 23:05:44,786 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-28 23:05:44,813 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 23:05:47,410 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-28 23:05:49,213 INFO org.apache.coyote.http11.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-28 23:05:49,341 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-28 23:05:49,373 INFO quotes.QuotesApplication [main] Started QuotesApplication in 23.098 seconds (process running for 26.969)
+2023-01-28 23:06:05,991 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-28 23:06:05,991 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-01-28 23:06:05,995 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-1] Completed initialization in 4 ms
+2023-01-28 23:06:10,428 WARN org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "users"]
+2023-01-28 23:06:29,631 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-28 23:06:29,635 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-28 23:06:29,664 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
