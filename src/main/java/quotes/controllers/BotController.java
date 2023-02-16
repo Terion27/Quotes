@@ -29,29 +29,17 @@ public class BotController extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
-        Message message = update.getMessage();
         try {
-            SendMessage responseMessage = getResponseMessage(message);
-            if (responseMessage != null) {
-                execute(responseMessage);
-            }
+            execute(getResponseMessage(update.getMessage()));
         } catch (TelegramApiException e) {
             log.error("Message is not sending: " + e.getMessage());
+            throw new RuntimeException("Message is not sending: ", e);
         }
     }
 
     public SendMessage getResponseMessage(Message message) {
-        Long chatId = message.getChatId();
+        if (!message.getText().isEmpty()) return messageService.runBotCommands(message);
 
-        SendMessage responseMessage = new SendMessage();
-        if (!message.getText().isEmpty()) {
-            String responseText = messageService.runBotCommands(message.getText(), chatId);
-
-//            responseMessage.setReplyMarkup(keyboard.getKeyboard());
-            responseMessage.setText(responseText);
-            responseMessage.setChatId(chatId);
-        }
-
-        return responseMessage;
+        return new SendMessage(message.getChatId().toString(), "Ожидается команда!");
     }
 }

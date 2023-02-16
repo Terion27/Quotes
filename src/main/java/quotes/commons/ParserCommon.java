@@ -23,8 +23,8 @@ public class ParserCommon {
             return getParsingPage(doc);
         } catch (IOException e) {
             log.error("Unable to load random quotes from internet: " + e.getMessage());
+            throw new RuntimeException("Unable to load random quotes from internet: " + e);
         }
-        return null;
     }
 
     private Map.Entry<Integer, String> getParsingPage(Document doc) {
@@ -62,5 +62,4 @@ public class ParserCommon {
         }
         return null;
     }
-
 }
