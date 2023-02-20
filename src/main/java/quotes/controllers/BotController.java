@@ -10,6 +10,9 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import quotes.services.MessageService;
 
+import static quotes.config.MessageStrings.COMMAND_EXPECTED;
+import static quotes.config.MessageStrings.MESSAGE_IS_NOT_SENDING;
+
 @Slf4j
 @Component
 @RequiredArgsConstructor
@@ -32,14 +35,14 @@ public class BotController extends TelegramLongPollingBot {
         try {
             execute(getResponseMessage(update.getMessage()));
         } catch (TelegramApiException e) {
-            log.error("Message is not sending: " + e.getMessage());
-            throw new RuntimeException("Message is not sending: ", e);
+            log.error(MESSAGE_IS_NOT_SENDING + e.getMessage());
+            throw new RuntimeException(MESSAGE_IS_NOT_SENDING, e);
         }
     }
 
     public SendMessage getResponseMessage(Message message) {
         if (!message.getText().isEmpty()) return messageService.runBotCommands(message);
 
-        return new SendMessage(message.getChatId().toString(), "Ожидается команда!");
+        return new SendMessage(message.getChatId().toString(), COMMAND_EXPECTED);
     }
 }

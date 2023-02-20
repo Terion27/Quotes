@@ -14,6 +14,9 @@ import quotes.repositories.ChatRepository;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 
+import static quotes.config.MessageStrings.FAILED_INVOKE_METHOD;
+import static quotes.config.MessageStrings.UNKNOWN_TEAM;
+
 
 @Slf4j
 @Service
@@ -28,7 +31,7 @@ public class MessageService {
                 .filter(f -> f.isAnnotationPresent(AppBotCommands.class))
                 .filter(m -> m.getAnnotation(AppBotCommands.class).description().equals(message.getText()))
                 .findFirst();
-        if (method.isEmpty()) return new SendMessage(message.getChatId().toString(),"Неизвестная команда");
+        if (method.isEmpty()) return new SendMessage(message.getChatId().toString(), UNKNOWN_TEAM);
         try {
             method.get().setAccessible(true);
             Chat chat = chatSession(message.getChatId());
@@ -37,8 +40,8 @@ public class MessageService {
             return new SendMessage(message.getChatId().toString(), newQuote.getText()); // setReplyMarkup(keyboard.getKeyboard();
 
         } catch (IllegalAccessException | InvocationTargetException e)  {
-            log.error("Failed to invoke method: " + e.getMessage());
-            throw new RuntimeException("Failed to invoke method: ", e);
+            log.error(FAILED_INVOKE_METHOD + e.getMessage());
+            throw new RuntimeException(FAILED_INVOKE_METHOD, e);
         }
     }
 

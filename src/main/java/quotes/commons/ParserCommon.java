@@ -13,6 +13,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+import static quotes.config.MessageStrings.*;
+
 @Slf4j
 @Component
 public class ParserCommon {
@@ -23,7 +25,7 @@ public class ParserCommon {
             return getParsingPage(doc);
         } catch (IOException e) {
             log.error("Unable to load random quotes from internet: " + e.getMessage());
-            throw new RuntimeException("Unable to load random quotes from internet: " + e);
+            throw new RuntimeException(UNABLE_TO_LOAD_RANDOM_QUOTE_FROM_INTERNET + e);
         }
     }
 
@@ -48,7 +50,7 @@ public class ParserCommon {
                 if (!text.isEmpty()) quotes.put(id, text);
             }
         } catch (IOException e){
-            log.error("Unable to load page with quotes from internet: " + e.getMessage());
+            log.error(UNABLE_TO_LOAD_PAGE_WITH_QUOTE_FROM_INTERNET + e.getMessage());
         }
         return quotes;
     }
@@ -58,7 +60,7 @@ public class ParserCommon {
             Document doc = Jsoup.connect("http://ibash.org.ru/quote.php?id=" + id).get();
             return getParsingPage(doc);
         } catch (IOException e) {
-            log.error("Unable to load quote from internet: " + e.getMessage());
+            log.error(UNABLE_TO_LOAD_QUOTE_FROM_INTERNET + e.getMessage());
         }
         return null;
     }

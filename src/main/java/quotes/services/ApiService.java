@@ -16,10 +16,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static quotes.config.MessageStrings.*;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
 public class ApiService {
+
 
     private final QuoteRepository quoteRepository;
     private final BotCommands botCommands;
@@ -30,8 +33,8 @@ public class ApiService {
         try {
             _page = Integer.parseInt(page);
         }catch (Exception e) {
-            log.error("Api, method getAll: " + e.getMessage());
-            throw new RuntimeException("Api, method getPage: " + e);
+            log.error(API_METHOD_GETALL + e.getMessage());
+            throw new RuntimeException(API_METHOD_GETALL + e);
         }
         var res = quoteRepository.findAll(PageRequest.of(_page - 1, 5));
 
@@ -43,8 +46,8 @@ public class ApiService {
         try {
             _page = Integer.parseInt(page);
         } catch (Exception e) {
-            log.error("Api, method getPage: " + e.getMessage());
-            throw new RuntimeException("Api, method getPage: " + e);
+            log.error(API_METHOD_GETPAGE + e.getMessage());
+            throw new RuntimeException(API_METHOD_GETPAGE + e);
         }
         return new ResponseEntity<>(getPage(_page), HttpStatus.OK);
     }
@@ -63,7 +66,7 @@ public class ApiService {
                 .orElseGet(() -> {
                     var quoteEntry = parserCommon.getQuoteByIdFromInternet(id);
                     if (quoteEntry != null) return quoteRepository.save(new Quote(quoteEntry.getValue(), quoteEntry.getKey()));
-                    return new Quote("Нет цитаты с таким ID!", -1);
+                    return new Quote(NO_QUOTE_WITH_THIS_ID, -1);
                 });
     }
 
